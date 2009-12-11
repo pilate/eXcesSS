@@ -1,0 +1,15 @@
+This is a little GreaseMonkey script I wrote in an attempt to automate my own pattern of XSS detection. There are plenty of browser tools for testing form submission XSS, but none (that I've stumbled upon) that give a simple display for testing links and hidden form elements.
+
+Small boxes will be displayed on the left hand side of all pages depending on vectors available.
+
+[Red Box]:
+-Displayed when the current page has links that contain GET parameters.
+--Clicking will bring forward a menu of links with sub-menus of each attack parameter.
+
+[Yellow Box]:
+-Displayed when the current page has hidden form elements. (Frequently filled by values of URL GET parameters)
+--Clicking will bring forward a menu of current hidden elements to attack.
+
+[Green Box]:
+-Displayed when the current page has a hidden form element that's pulling its value from the current URL.
+--Clicking will attempt to attack this vector.
